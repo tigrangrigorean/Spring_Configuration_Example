@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="city" class="org.xml_configuration.model.City">
+        <constructor-arg name="electricStation" ref = "electricStation"/>
+        <constructor-arg name="subwayStation" ref = "subwayStation"/>
+        <constructor-arg name="libraries" ref = "libraries"/>
+    </bean>
+    
+    <bean id ="electricStation" class = "org.xml_configuration.model.ElectricStation"></bean>
+    <bean id ="subwayStation" class = "org.xml_configuration.model.SubwayStation"></bean>
+    <bean id ="libraries" class = "org.xml_configuration.model.Libraries"></bean>
+
+
+</beans>
